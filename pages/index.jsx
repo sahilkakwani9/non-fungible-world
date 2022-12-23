@@ -12,10 +12,10 @@ const Home = () => {
   const [filterbyCollection, setFilterbyCollection] = useState(false);
   return (
     <div className="flex flex-col items-center justify-center py-8 gap-y-3">
-      <div>
-        <h1 className='text-6xl text-blue-500 font-extrabold'>Non-Fungible World</h1>
+      <div className='text-center p-4'>
+        <h1 className='text-5xl lg:text-6xl text-blue-500 font-extrabold'>Non-Fungible World</h1>
       </div>
-    <div className="flex w-full justify-around items-center gap-y-2 mt-8">
+    <div className="flex flex-col lg:flex-row w-full justify-around items-center gap-y-2 mt-8">
       <input type={"text"} className="border-2 border-gray-600 rounded-md px-4" disabled={filterbyCollection} onChange={(e)=>{setWallet(e.target.value)}} value={wallet} placeholder="Add your wallet address"></input>
       <input type={"text"} className="border-2 border-gray-600 rounded-md px-4 w-60" onChange={(e)=>{setCollection(e.target.value)}} value={collection} placeholder="Add the collection address"></input>
       <label className="text-gray-600 "><input type={"checkbox"} className="mr-2" onChange={(e)=>setFilterbyCollection(e.target.checked)}></input>Fetch for collection</label>
@@ -30,7 +30,7 @@ const Home = () => {
 
         }} className={"disabled:bg-slate-500 text-white bg-blue-400 py-2 text-lg rounded-lg px-12"}>Get NFT's! </button>
     </div>
-    <div className='flex flex-wrap gap-y-12 mt-4 w-8/9 gap-x-8 justify-center'>
+    <div className='flex flex-col lg:flex-row flex-wrap lg:gap-y-12 mt-4 w-8/9 gap-x-8 justify-center'>
         {
           NFT && NFT.map(nft => {
             return (

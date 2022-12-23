@@ -1,7 +1,7 @@
 export const NFTCard = ({ nft }) => {
 
     return (
-        <div className="w-1/4 flex flex-col ">
+        <div className=" w-full lg:w-1/4 flex flex-col p-8 lg:p-0">
             <div className="rounded-md h-60 w-full">
                 <img className="object-fit h-full w-full rounded-t-md" src={nft.media[0].gateway}></img>
             </div>
